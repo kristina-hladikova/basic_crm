@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'basic_crm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'basic_crm_db',
-        'USER': 'postgres',
-        'PASSWORD': 'sqlsql',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -135,3 +131,4 @@ STATIC_ROOT = "static_root"
 AUTH_USER_MODEL = 'leads.User'
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 LOGIN_REDIRECT_URL = "/leads"
+LOGIN_URL = "/login"
